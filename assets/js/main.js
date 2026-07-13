@@ -1,4 +1,4 @@
-/* main.js — theme, nav, reveal, fiducial ticks */
+/* main.js — theme, nav, reveal */
 (function () {
   // ----- theme -----
   const root = document.documentElement;
@@ -19,15 +19,6 @@
     const path = new URL(a.href, location.origin).pathname.replace(/\/$/, "") || "/";
     const match = path === here || (path === "/index.html" && here === "/") || (here === "/index.html" && path === "/");
     if (match) a.setAttribute("aria-current", "page");
-  });
-
-  // ----- fiducial corner ticks -----
-  document.querySelectorAll(".fid").forEach((el) => {
-    ["tl", "tr", "bl", "br"].forEach((pos) => {
-      const t = document.createElement("span");
-      t.className = "tick " + pos;
-      el.appendChild(t);
-    });
   });
 
   // ----- reveal on scroll -----

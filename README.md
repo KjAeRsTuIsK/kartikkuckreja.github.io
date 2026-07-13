@@ -2,12 +2,12 @@
 
 Personal academic website of **Kartik Kuckreja** — live at [kartikkuckreja.github.io](https://kartikkuckreja.github.io).
 
-Hand-built with vanilla HTML/CSS/JS. No frameworks, no build step, no trackers. The design is an homage to classic computer vision: paper-and-ink figures, Sobel edge maps, detection boxes, fiducial marks, and a Laplacian kernel in the footer. Dark mode is a darkroom.
+Hand-built with vanilla HTML/CSS/JS. No frameworks, no build step, no trackers. The design is quiet and typography-first: warm paper, near-black ink, one restrained blue accent, with a matching dark theme.
 
 ## How it works
 
 ```
-index.html            home — hero with a live "sobel → portrait" canvas animation
+index.html            home — bio, research focus, selected publications, news
 publications.html     all papers, rendered from JSON, with live badges
 research.html         research areas in prose
 news.html             the full news log
@@ -16,8 +16,7 @@ assets/
   css/main.css        the whole design system (light + dark themes)
   js/main.js          theme toggle, scroll reveals, nav
   js/site-data.js     renders publications & news from JSON; live GitHub-star and
-                      HF-download badges; procedural thumbnails; BibTeX generator
-  js/hero.js          the edge-detection portrait animation
+                      HF-download badges; BibTeX generator
   data/publications.json   ← the single source of truth for papers
   data/news.json           ← the single source of truth for news
 scripts/update_publications.py   arXiv watcher (stdlib only)

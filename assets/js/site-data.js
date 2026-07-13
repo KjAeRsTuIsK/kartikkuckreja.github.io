@@ -30,84 +30,27 @@
     return v;
   }
 
-  function hashSeed(str) {
-    let h = 2166136261;
-    for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); }
-    return h >>> 0;
-  }
-  function mulberry32(a) {
-    return function () {
-      a |= 0; a = (a + 0x6d2b79f5) | 0;
-      let t = Math.imul(a ^ (a >>> 15), 1 | a);
-      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
-      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
-    };
-  }
-
   function cssVar(name) {
     return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
   }
 
-  // ---------- procedural thumbnail (for papers with no figure yet) ----------
+  // ---------- placeholder thumbnail (for papers with no figure yet) ----------
   function drawProceduralThumb(canvas, pub) {
-    // square canvas + center-weighted composition so object-fit:cover crops safely
+    // square canvas + centered composition so object-fit:cover crops safely
     const W = 460, H = 460;
     canvas.width = W; canvas.height = H;
     const ctx = canvas.getContext("2d");
-    const rnd = mulberry32(hashSeed(pub.id));
-    const paper = cssVar("--paper-raise") || "#fbf8f0";
-    const ink = cssVar("--ink-soft") || "#4c463a";
-    const accent = cssVar("--accent") || "#0e6b3d";
-    const faint = cssVar("--ink-faint") || "#7a7261";
+    const paper = cssVar("--paper-raise") || "#fdfcf9";
+    const faint = cssVar("--ink-faint") || "#7b7d80";
+    const line = cssVar("--line-strong") || "rgba(27,28,30,.3)";
 
     ctx.fillStyle = paper; ctx.fillRect(0, 0, W, H);
-    // dot grid
-    ctx.fillStyle = ink; ctx.globalAlpha = 0.12;
-    for (let x = 14; x < W; x += 22) for (let y = 14; y < H; y += 22) ctx.fillRect(x, y, 1.4, 1.4);
-    // contour polylines (like an edge map)
-    ctx.globalAlpha = 0.5; ctx.strokeStyle = ink; ctx.lineWidth = 1.1;
-    for (let c = 0; c < 4; c++) {
-      ctx.beginPath();
-      let x = rnd() * W, y = rnd() * H, a = rnd() * Math.PI * 2;
-      ctx.moveTo(x, y);
-      for (let s = 0; s < 60; s++) {
-        a += (rnd() - 0.5) * 1.1;
-        x += Math.cos(a) * 9; y += Math.sin(a) * 9;
-        if (x < 8 || x > W - 8 || y < 8 || y > H - 8) break;
-        ctx.lineTo(x, y);
-      }
-      ctx.stroke();
-    }
-    // feature-point crosses
-    ctx.globalAlpha = 0.95; ctx.strokeStyle = accent; ctx.lineWidth = 1.4;
-    for (let i = 0; i < 9; i++) {
-      const x = 20 + rnd() * (W - 40), y = 20 + rnd() * (H - 40);
-      ctx.beginPath();
-      ctx.moveTo(x - 5, y); ctx.lineTo(x + 5, y);
-      ctx.moveTo(x, y - 5); ctx.lineTo(x, y + 5);
-      ctx.stroke();
-    }
-    // dashed detection box + label (kept near center to survive cropping)
-    const bw = 120 + rnd() * 120, bh = 70 + rnd() * 100;
-    const bx = 100 + rnd() * (W - bw - 200), by = 90 + rnd() * (H - bh - 190);
-    ctx.setLineDash([6, 4]); ctx.strokeStyle = accent; ctx.lineWidth = 1.6;
-    ctx.strokeRect(bx, by, bw, bh);
-    ctx.setLineDash([]);
-    ctx.fillStyle = accent;
-    ctx.font = "600 13px 'IBM Plex Mono', monospace";
-    const label = (pub.venue === "Preprint" ? "preprint" : pub.venue.toLowerCase().replace(/\s.*/, "")) + " · " + (0.9 + rnd() * 0.09).toFixed(2);
-    const tw = ctx.measureText(label).width + 12;
-    ctx.fillRect(bx - 1, by - 20, tw, 20);
-    ctx.fillStyle = paper;
-    ctx.fillText(label, bx + 5, by - 6);
-    // arXiv id watermark
-    if (pub.arxiv) {
-      ctx.fillStyle = faint; ctx.globalAlpha = 0.85;
-      ctx.font = "600 16px 'IBM Plex Mono', monospace";
-      const wm = "arXiv:" + pub.arxiv;
-      ctx.fillText(wm, (W - ctx.measureText(wm).width) / 2, H - 28);
-    }
-    ctx.globalAlpha = 1;
+    ctx.strokeStyle = line; ctx.lineWidth = 1;
+    ctx.strokeRect(120, 190, 220, 80);
+    ctx.fillStyle = faint;
+    ctx.font = "500 17px 'IBM Plex Mono', monospace";
+    const wm = pub.arxiv ? "arXiv:" + pub.arxiv : "paper";
+    ctx.fillText(wm, (W - ctx.measureText(wm).width) / 2, H / 2 + 6);
   }
 
   // ---------- BibTeX ----------
@@ -154,7 +97,7 @@
   // ---------- publication card ----------
   function pubCard(pub, links) {
     const el = document.createElement("article");
-    el.className = "pub card fid reveal";
+    el.className = "pub card reveal";
     el.dataset.topics = (pub.topics || []).join(" ");
     el.dataset.year = pub.year;
 
@@ -174,7 +117,7 @@
     const hf = pub.hf_dataset ? `<a class="chip stat" data-hf="${esc(pub.hf_dataset)}" href="https://huggingface.co/datasets/${esc(pub.hf_dataset)}" target="_blank" rel="noopener">${ICONS.dl}…</a>` : "";
 
     el.innerHTML = `
-      <div class="pub-thumb">${thumb}<div class="scan"></div></div>
+      <div class="pub-thumb">${thumb}</div>
       <div class="pub-body">
         <div class="chips" style="margin-bottom:8px">
           <span class="${venueCls}">${esc(pub.venue)}</span>${award}
@@ -231,16 +174,7 @@
     if (opts.limit) pubs = pubs.slice(0, opts.limit);
     host.innerHTML = "";
     pubs.forEach((p) => host.appendChild(pubCard(p, data.author_links)));
-    // re-inject fiducial ticks + reveals for dynamic nodes
-    host.querySelectorAll(".fid").forEach((el) => {
-      ["tl", "tr", "bl", "br"].forEach((pos) => {
-        const t = document.createElement("span"); t.className = "tick " + pos; el.appendChild(t);
-      });
-    });
     if (window.observeReveals) window.observeReveals(host);
-    // stats
-    const nEl = document.getElementById("stat-papers");
-    if (nEl) nEl.textContent = data.publications.length;
   }
 
   function setupFilters(listSel, filterSel) {
@@ -298,18 +232,5 @@
     if (window.observeReveals) window.observeReveals(host);
   }
 
-  // total stars across repos → hero statusline
-  async function fillTotalStars() {
-    const el = document.getElementById("stat-stars");
-    if (!el) return;
-    try {
-      const data = await getData();
-      const repos = [...new Set(data.publications.map((p) => p.github_repo).filter(Boolean))];
-      const counts = await Promise.all(repos.map((r) => cachedFetch("gh:" + r, "https://api.github.com/repos/" + r).then((d) => d.stargazers_count).catch(() => 0)));
-      const total = counts.reduce((a, b) => a + b, 0);
-      if (total > 0) el.textContent = fmt(total) + "+";
-    } catch (e) { /* leave placeholder */ }
-  }
-
-  window.Site = { renderPubs, renderNews, setupFilters, fillTotalStars };
+  window.Site = { renderPubs, renderNews, setupFilters };
 })();
