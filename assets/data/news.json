@@ -1,0 +1,101 @@
+{
+  "news": [
+    {
+      "date": "2026-07",
+      "label": "2026-07",
+      "text": "<a href='https://arxiv.org/abs/2607.03562' target='_blank' rel='noopener'>XPlainVerse</a> is out on arXiv — a million-scale benchmark for explainable deepfake detection.",
+      "tag": "paper"
+    },
+    {
+      "date": "2026-06",
+      "label": "2026-06",
+      "text": "New preprint: <a href='https://arxiv.org/abs/2606.12985' target='_blank' rel='noopener'>Objects Before Words</a> — grounding language in child-view video.",
+      "tag": "paper"
+    },
+    {
+      "date": "2026-02",
+      "label": "2026-02",
+      "text": "<a href='https://arxiv.org/abs/2602.19715' target='_blank' rel='noopener'>DeepfakeJudge</a> accepted at <strong>CVPR 2026</strong>!",
+      "tag": "accepted"
+    },
+    {
+      "date": "2026-01",
+      "label": "2026-01",
+      "text": "<a href='https://arxiv.org/abs/2505.22581' target='_blank' rel='noopener'>ArEnAV</a> accepted at <strong>ICLR 2026</strong>!",
+      "tag": "accepted"
+    },
+    {
+      "date": "2025-12",
+      "label": "2025-12",
+      "text": "Looking for <strong>PhD opportunities</strong> starting Fall 2026 — reach out if my research fits your lab.",
+      "tag": "announcement",
+      "pinned": true
+    },
+    {
+      "date": "2025-07",
+      "label": "2025-07",
+      "text": "<a href='https://arxiv.org/abs/2507.20579' target='_blank' rel='noopener'>AV-Deepfake1M++</a> released — powering the 1M-Deepfakes Detection Challenge.",
+      "tag": "paper"
+    },
+    {
+      "date": "2025-06",
+      "label": "2025-06",
+      "text": "<a href='https://arxiv.org/abs/2411.19325' target='_blank' rel='noopener'>GEOBench-VLM</a> accepted at <strong>ICCV 2025</strong> as a Highlight ⭐.",
+      "tag": "accepted"
+    },
+    {
+      "date": "2025-02",
+      "label": "2025-02",
+      "text": "<a href='https://arxiv.org/abs/2411.16508' target='_blank' rel='noopener'>ALM-Bench</a> accepted at <strong>CVPR 2025</strong> as a Highlight ⭐.",
+      "tag": "accepted"
+    },
+    {
+      "date": "2025-02",
+      "label": "2025-02",
+      "text": "Joined <a href='https://mbzuai.ac.ae' target='_blank' rel='noopener'>MBZUAI</a> as a Research Engineer with Prof. Muhammad Haris Khan and Prof. Abhinav Dhall.",
+      "tag": "career"
+    },
+    {
+      "date": "2024-06",
+      "label": "2024-06",
+      "text": "Attending <a href='https://cvpr.thecvf.com/Conferences/2024' target='_blank' rel='noopener'>CVPR 2024</a> in Seattle, USA 🥳.",
+      "tag": "travel"
+    },
+    {
+      "date": "2024-06",
+      "label": "2024-06",
+      "text": "Graduated from BITS Pilani, Hyderabad Campus 🎓.",
+      "tag": "career"
+    },
+    {
+      "date": "2024-05",
+      "label": "2024-05",
+      "text": "<a href='https://ieeexplore.ieee.org/abstract/document/10582046' target='_blank' rel='noopener'>INDIFACE</a> accepted at the <a href='https://sites.google.com/view/sd-fga2024/' target='_blank' rel='noopener'>IEEE FG SD-FGA Workshop</a> 🎉.",
+      "tag": "accepted"
+    },
+    {
+      "date": "2024-03",
+      "label": "2024-03",
+      "text": "<a href='https://arxiv.org/abs/2311.15826' target='_blank' rel='noopener'>GeoChat</a> accepted at <strong>CVPR 2024</strong> 🎉.",
+      "tag": "accepted"
+    },
+    {
+      "date": "2023-11",
+      "label": "2023-11",
+      "text": "Released <a href='https://github.com/mbzuai-oryx/GeoChat' target='_blank' rel='noopener'>GeoChat</a> — the first grounded VLM for remote sensing.",
+      "tag": "paper"
+    },
+    {
+      "date": "2023-06",
+      "label": "2023-06",
+      "text": "Joined <a href='https://www.ival-mbzuai.com/about' target='_blank' rel='noopener'>MBZUAI (IVAL Lab)</a> as a Research Assistant.",
+      "tag": "career"
+    },
+    {
+      "date": "2022-06",
+      "label": "2022-06",
+      "text": "Joined the <a href='https://www.iitrpr.ac.in/lasii/index.html' target='_blank' rel='noopener'>LASII Lab</a> at IIT Ropar as a Summer Research Intern.",
+      "tag": "career"
+    }
+  ]
+}

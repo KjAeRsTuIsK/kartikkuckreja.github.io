@@ -1,0 +1,44 @@
+name: Sync publications from arXiv
+
+on:
+  schedule:
+    - cron: "17 6 * * *"   # daily at 06:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check arXiv for new papers
+        id: sync
+        run: |
+          python3 scripts/update_publications.py /tmp/summary.txt
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "summary=$(cat /tmp/summary.txt)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open pull request with the new paper(s)
+        if: steps.sync.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          BRANCH="arxiv-sync/$(date +%Y-%m-%d)"
+          git config user.name "arxiv-sync-bot"
+          git config user.email "actions@github.com"
+          git checkout -b "$BRANCH"
+          git add assets/data/publications.json assets/data/news.json
+          git commit -m "New paper(s) found on arXiv: ${{ steps.sync.outputs.summary }}"
+          git push -u origin "$BRANCH" --force
+          gh pr create \
+            --title "📄 New paper detected on arXiv" \
+            --body "$(printf 'The daily arXiv sync found new paper(s) with your name:\n\n**%s**\n\nThis PR adds them to the Publications page and the News log as preprints.\n\nBefore merging, feel free to edit \`assets/data/publications.json\` on this branch to:\n- set the venue once accepted (e.g. \"CVPR 2027\")\n- add \`github_repo\` / \`hf_dataset\` for live star & download badges\n- add a \`thumbnail\` image (otherwise a procedural one is generated)\n- add \`topics\` and set \`selected: true\` to feature it on the homepage\n\nMerging deploys it to the live site.' "${{ steps.sync.outputs.summary }}")" \
+            --base main --head "$BRANCH" || echo "PR may already exist for $BRANCH"

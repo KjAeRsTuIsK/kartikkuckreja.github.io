@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research — Kartik Kuckreja</title>
+  <meta name="description" content="Kartik Kuckreja's research: interpretable synthetic media detection, grounded vision–language models, earth observation, and multilingual multimodal benchmarks.">
+  <link rel="canonical" href="https://kartikkuckreja.github.io/research.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Research — Kartik Kuckreja">
+  <meta property="og:description" content="What I work on, and why: trustworthy multimodal AI.">
+  <meta property="og:image" content="https://kartikkuckreja.github.io/assets/img/kartik.jpg">
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="14" y="14" width="72" height="72" fill="none" stroke="%230e6b3d" stroke-width="11"/><rect x="39" y="39" width="22" height="22" fill="%230e6b3d"/></svg>'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script>(function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark");})();</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text">kartik.kuckreja</span></a>
+      <div class="nav-links">
+        <a href="/">home</a>
+        <a href="/publications.html">publications</a>
+        <a href="/research.html">research</a>
+        <a href="/news.html">news</a>
+        <a href="/about.html">about</a>
+      </div>
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <header class="section" style="padding-top:clamp(36px,6vw,70px)">
+      <p class="kicker">The question behind the work</p>
+      <h1 style="font-size:clamp(2rem,5vw,3.2rem)">Can we trust what machines <em style="color:var(--accent-ink)">say they see</em>?</h1>
+      <p class="muted" style="max-width:66ch">
+        Modern multimodal models describe images fluently — but fluency isn't faithfulness.
+        My research attacks this gap from three directions: building models whose answers are
+        <strong>grounded</strong> in pixels, building <strong>forensic tools</strong> for media where the
+        pixels themselves lie, and building <strong>benchmarks</strong> that catch models pretending.
+      </p>
+    </header>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="figno">AREA 01</span>
+        <h2>Synthetic media &amp; deepfake forensics</h2>
+      </div>
+      <div class="card fid reveal" style="padding:24px 26px">
+        <p style="margin-top:0">
+          Detection accuracy is no longer enough — a detector that can't explain <em>why</em> a video is fake
+          won't be trusted in a newsroom or a courtroom. I work on <strong>interpretable and explainable
+          foundation models for synthetic media detection</strong>: judges that verify whether a detector's
+          reasoning is actually grounded in visual artifacts
+          (<a href="https://arxiv.org/abs/2602.19715" target="_blank" rel="noopener">DeepfakeJudge, CVPR 2026</a>;
+          <a href="https://arxiv.org/abs/2607.03562" target="_blank" rel="noopener">XPlainVerse</a>),
+          and datasets that stress detectors where they're weakest — multilingual, code-switched speech
+          (<a href="https://arxiv.org/abs/2505.22581" target="_blank" rel="noopener">ArEnAV, ICLR 2026</a>),
+          real-world perturbations at million-video scale
+          (<a href="https://arxiv.org/abs/2507.20579" target="_blank" rel="noopener">AV-Deepfake1M++</a>),
+          and under-represented populations
+          (<a href="https://ieeexplore.ieee.org/abstract/document/10582046" target="_blank" rel="noopener">INDIFACE, FG 2024</a>).
+        </p>
+        <div class="chips">
+          <a class="chip" href="/publications.html?topic=deepfakes">papers in this area →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="figno">AREA 02</span>
+        <h2>Grounded vision–language models</h2>
+      </div>
+      <div class="card fid reveal" style="padding:24px 26px">
+        <p style="margin-top:0">
+          A model that can <em>point</em> at what it's talking about is harder to fool and easier to trust.
+          <a href="https://arxiv.org/abs/2311.15826" target="_blank" rel="noopener">GeoChat (CVPR 2024)</a> —
+          my undergraduate thesis with Prof. Fahad Khan, Dr. Salman Khan and Dr. Abhijit Das — was the first
+          grounded large VLM for remote sensing: it answers questions about satellite imagery while localizing
+          its evidence with boxes. More recently I've explored how grounding emerges in the first place, with
+          object-first inductive biases for language learning from child-view video
+          (<a href="https://arxiv.org/abs/2606.12985" target="_blank" rel="noopener">Objects Before Words</a>).
+        </p>
+        <div class="chips">
+          <a class="chip" href="/publications.html?topic=vision-language">papers in this area →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="figno">AREA 03</span>
+        <h2>Benchmarks that keep models honest</h2>
+      </div>
+      <div class="card fid reveal" style="padding:24px 26px">
+        <p style="margin-top:0">
+          Progress follows measurement. I've helped build evaluations that models can't shortcut:
+          <a href="https://arxiv.org/abs/2411.16508" target="_blank" rel="noopener">ALM-Bench (CVPR 2025 Highlight)</a>
+          tests cultural and linguistic coverage across <strong>100 languages</strong>;
+          <a href="https://arxiv.org/abs/2411.19325" target="_blank" rel="noopener">GEOBench-VLM (ICCV 2025 Highlight)</a>
+          probes geospatial reasoning with 10,000+ manually verified tasks. Earlier work includes long movie
+          understanding and deepfake benchmarking.
+        </p>
+        <div class="chips">
+          <a class="chip" href="/publications.html?topic=benchmark">papers in this area →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <span class="figno">NOW</span>
+        <h2>What's on my desk</h2>
+      </div>
+      <ul class="timeline reveal">
+        <li><span class="tdate">ACTIVE</span><span class="ttext">Interpretable / explainable foundation models for synthetic media detection — the through-line of my planned PhD.</span></li>
+        <li><span class="tdate">ACTIVE</span><span class="ttext">Reasoning supervision for multimodal judges: can an MLLM grade another model's visual evidence?</span></li>
+        <li class="pinned"><span class="tdate">OPEN</span><span class="ttext">Looking for PhD positions starting <strong>Fall 2026</strong> — <a href="mailto:kartikkuckreja456@gmail.com">say hello</a>.</span></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-kernel" aria-hidden="true">
+            <span>0</span><span class="on">-1</span><span>0</span>
+            <span class="on">-1</span><span class="on">4</span><span class="on">-1</span>
+            <span>0</span><span class="on">-1</span><span>0</span>
+          </div>
+          <div class="mono small">kartik.kuckreja · computer vision</div>
+          <p class="foot-note">∇² — the Laplacian: how a machine first finds an edge.<br>© <span data-year></span> Kartik Kuckreja.</p>
+        </div>
+        <div class="foot-links">
+          <a href="/publications.html">publications</a>
+          <a href="/research.html">research</a>
+          <a href="/news.html">news</a>
+          <a href="/about.html">about</a>
+        </div>
+        <div class="foot-links">
+          <a href="mailto:kartikkuckreja456@gmail.com">email</a>
+          <a href="https://scholar.google.com/citations?user=9_RLvbIAAAAJ&hl=en" target="_blank" rel="noopener">google scholar</a>
+          <a href="https://github.com/KjAeRsTuIsK" target="_blank" rel="noopener">github</a>
+          <a href="https://www.linkedin.com/in/kartik-kuckreja-930531221/" target="_blank" rel="noopener">linkedin</a>
+        </div>
+        <div class="foot-links">
+          <span class="mono small muted">hand-built · no frameworks</span>
+          <span class="mono small muted">publications auto-sync from arXiv</span>
+          <a href="https://github.com/KjAeRsTuIsK/kartikkuckreja.github.io" target="_blank" rel="noopener">view source</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

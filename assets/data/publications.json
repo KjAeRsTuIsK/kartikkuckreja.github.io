@@ -1,0 +1,217 @@
+{
+  "author_links": {
+    "Kartik Kuckreja": "",
+    "Parul Gupta": "https://scholar.google.com.au/citations?user=Wik3mXsAAAAJ&hl=en",
+    "Muhammad Haris Khan": "https://m-haris-khan.com/",
+    "Abhinav Dhall": "https://research.monash.edu/en/persons/abhinav-dhall",
+    "Injy Hamed": "https://scholar.google.com/citations?user=N_RhXusAAAAJ&hl=en",
+    "Thamar Solorio": "http://solorio.uh.edu/",
+    "Muhammad Sohail Danish": "https://scholar.google.com/citations?user=a8yxkD0AAAAJ&hl=en",
+    "Muzammal Naseer": "https://muzammal-naseer.com/",
+    "Abhijit Das": "https://sites.google.com/site/dasabhijit2048/home",
+    "Salman Khan": "https://salman-h-khan.github.io/",
+    "Fahad Shahbaz Khan": "https://sites.google.com/view/fahadkhans/home",
+    "Muhammad Akhtar Munir": "https://akhtarvision.github.io/",
+    "Syed Roshaan Ali Shah": "https://www.linkedin.com/in/syed-roshaan-ali-shah-b797b44a/",
+    "Paolo Fraccaro": "https://research.ibm.com/people/paolo-fraccaro",
+    "Alexandre Lacoste": "https://www.servicenow.com/research/author/alexandre-lacoste.html",
+    "Ashmal Vayani": "https://ashmalvayani.github.io/",
+    "Dinura Dissanayake": "https://scholar.google.com/citations?user=HVIV99gAAAAJ&hl=en",
+    "Ximi Hoque": "https://scholar.google.co.in/citations?user=MNYVpQgAAAAJ&hl=en",
+    "Nishit Poddar": "https://scholar.google.com/citations?user=HAburnkAAAAJ&hl=en",
+    "Shukesh Reddy": "https://scholar.google.com/citations?user=S6RK4N4AAAAJ&hl=en",
+    "Shreya Ghosh": "https://sites.google.com/view/shreyaghosh",
+    "Zhixi Cai": "https://www.controlnet.space/"
+  },
+  "publications": [
+    {
+      "id": "xplainverse",
+      "arxiv": "2607.03562",
+      "title": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
+      "authors": ["Abhijeet Narang", "Kartik Kuckreja", "Shreya Ghosh", "Muhammad Haris Khan", "Jianfei Cai", "Abhinav Dhall"],
+      "equal_contribution": [],
+      "venue": "Preprint",
+      "award": null,
+      "year": 2026,
+      "date": "2026-07-03",
+      "abstract": "As deepfake detection models increasingly produce natural language explanations, their reasoning often remains weakly grounded in visual artifacts, limiting reliability and user trust. XPlainVerse is a million-scale benchmark for evaluating whether explanations reflect the actual manipulations present in synthetic media.",
+      "thumbnail": null,
+      "links": {
+        "paper": "https://arxiv.org/abs/2607.03562"
+      },
+      "github_repo": null,
+      "hf_dataset": null,
+      "topics": ["deepfakes", "explainability"],
+      "selected": true
+    },
+    {
+      "id": "objects-before-words",
+      "arxiv": "2606.12985",
+      "title": "Objects Before Words: Object-First Inductive Biases for Grounding Language in Child-View Video",
+      "authors": ["Sathira Silva", "Abrham Kahsay Gebreselasie", "Muhammad Umer Sheikh", "Kartik Kuckreja", "Daniel Harari", "Muhammad Haris Khan"],
+      "equal_contribution": [],
+      "venue": "Preprint",
+      "award": null,
+      "year": 2026,
+      "date": "2026-06-11",
+      "abstract": "Learning grounded word meaning from natural experience requires resolving when a named referent appears and where it is in a cluttered frame. We propose object-first inductive biases for grounding language in egocentric, child-view video such as SAYCam.",
+      "thumbnail": null,
+      "links": {
+        "paper": "https://arxiv.org/abs/2606.12985"
+      },
+      "github_repo": null,
+      "hf_dataset": null,
+      "topics": ["vision-language", "grounding"],
+      "selected": false
+    },
+    {
+      "id": "deepfakejudge",
+      "arxiv": "2602.19715",
+      "title": "Pixels Don't Lie (But Your Detector Might): Bootstrapping MLLM-as-a-Judge for Trustworthy Deepfake Detection and Reasoning Supervision",
+      "authors": ["Kartik Kuckreja", "Parul Gupta", "Muhammad Haris Khan", "Abhinav Dhall"],
+      "equal_contribution": [],
+      "venue": "CVPR 2026",
+      "award": null,
+      "year": 2026,
+      "date": "2026-02-23",
+      "abstract": "Deepfake detection models often generate natural-language explanations, yet their reasoning is frequently ungrounded in visual evidence. DeepfakeJudge is a framework for scalable reasoning supervision that bootstraps an MLLM-as-a-judge for trustworthy deepfake detection.",
+      "thumbnail": "assets/img/paper-deepfakejudge.jpg",
+      "links": {
+        "paper": "https://arxiv.org/abs/2602.19715",
+        "code": "https://github.com/KjAeRsTuIsK/DeepfakeJudge"
+      },
+      "github_repo": "KjAeRsTuIsK/DeepfakeJudge",
+      "hf_dataset": null,
+      "topics": ["deepfakes", "mllm", "explainability"],
+      "selected": true
+    },
+    {
+      "id": "av-deepfake1m-pp",
+      "arxiv": "2507.20579",
+      "title": "AV-Deepfake1M++: A Large-Scale Audio-Visual Deepfake Benchmark with Real-World Perturbations",
+      "authors": ["Zhixi Cai", "Kartik Kuckreja", "Shreya Ghosh", "Akanksha Chuchra", "Muhammad Haris Khan", "Usman Tariq", "Tom Gedeon", "Abhinav Dhall"],
+      "equal_contribution": [],
+      "venue": "Preprint",
+      "award": null,
+      "year": 2025,
+      "date": "2025-07-28",
+      "abstract": "A large-scale audio-visual deepfake benchmark of over one million videos, rich in generation methods and real-world perturbation strategies, powering the 1M-Deepfakes Detection Challenge.",
+      "thumbnail": null,
+      "links": {
+        "paper": "https://arxiv.org/abs/2507.20579",
+        "project": "https://deepfakes1m.github.io/"
+      },
+      "github_repo": null,
+      "hf_dataset": null,
+      "topics": ["deepfakes", "benchmark"],
+      "selected": false
+    },
+    {
+      "id": "arenav",
+      "arxiv": "2505.22581",
+      "title": "Tell me Habibi, is it Real or Fake?",
+      "authors": ["Kartik Kuckreja", "Parul Gupta", "Injy Hamed", "Thamar Solorio", "Muhammad Haris Khan", "Abhinav Dhall"],
+      "equal_contribution": [],
+      "venue": "ICLR 2026",
+      "award": null,
+      "year": 2026,
+      "date": "2025-05-28",
+      "abstract": "Most deepfake detection research focuses on monolingual content. ArEnAV is the first Arabic-English audio-visual deepfake dataset featuring code-switched and dialectal speech, exposing how detectors fail on multilingual media.",
+      "thumbnail": "assets/img/paper-arenav.jpg",
+      "links": {
+        "paper": "https://arxiv.org/abs/2505.22581",
+        "code": "https://github.com/KjAeRsTuIsK/ArEnAV",
+        "dataset": "https://huggingface.co/datasets/kartik060702/ArEnAV-Full"
+      },
+      "github_repo": "KjAeRsTuIsK/ArEnAV",
+      "hf_dataset": "kartik060702/ArEnAV-Full",
+      "topics": ["deepfakes", "multilingual", "benchmark"],
+      "selected": true
+    },
+    {
+      "id": "geobench-vlm",
+      "arxiv": "2411.19325",
+      "title": "GEOBench-VLM: Benchmarking Vision-Language Models for Geospatial Tasks",
+      "authors": ["Muhammad Sohail Danish", "Muhammad Akhtar Munir", "Syed Roshaan Ali Shah", "Kartik Kuckreja", "Fahad Shahbaz Khan", "Paolo Fraccaro", "Alexandre Lacoste", "Salman Khan"],
+      "equal_contribution": ["Muhammad Sohail Danish", "Muhammad Akhtar Munir"],
+      "venue": "ICCV 2025",
+      "award": "Highlight",
+      "year": 2025,
+      "date": "2024-11-28",
+      "abstract": "A benchmark specifically designed to evaluate VLMs on geospatial tasks — scene understanding, object counting, localization, and change detection over satellite and aerial imagery — with over 10,000 manually verified instructions.",
+      "thumbnail": "assets/img/paper-geobench.jpg",
+      "links": {
+        "paper": "https://arxiv.org/abs/2411.19325",
+        "code": "https://github.com/The-AI-Alliance/GEO-Bench-VLM"
+      },
+      "github_repo": "The-AI-Alliance/GEO-Bench-VLM",
+      "hf_dataset": null,
+      "topics": ["earth-observation", "vision-language", "benchmark"],
+      "selected": false
+    },
+    {
+      "id": "alm-bench",
+      "arxiv": "2411.16508",
+      "title": "All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages",
+      "authors": ["Ashmal Vayani", "Dinura Dissanayake", "Kartik Kuckreja", "et al."],
+      "equal_contribution": [],
+      "author_note": "70+ authors — full list on arXiv",
+      "venue": "CVPR 2025",
+      "award": "Highlight",
+      "year": 2025,
+      "date": "2024-11-25",
+      "abstract": "ALM-Bench evaluates large multimodal models across 100 languages and diverse cultural contexts, ensuring models respect local sensitivities and support low-resource languages.",
+      "thumbnail": "assets/img/paper-almbench.jpg",
+      "links": {
+        "paper": "https://arxiv.org/abs/2411.16508",
+        "code": "https://github.com/mbzuai-oryx/ALM-Bench",
+        "dataset": "https://huggingface.co/datasets/MBZUAI/ALM-Bench"
+      },
+      "github_repo": "mbzuai-oryx/ALM-Bench",
+      "hf_dataset": "MBZUAI/ALM-Bench",
+      "topics": ["multilingual", "benchmark", "vision-language"],
+      "selected": false
+    },
+    {
+      "id": "indiface",
+      "arxiv": null,
+      "title": "INDIFACE: Illuminating India's Deepfake Landscape with a Comprehensive Synthetic Dataset",
+      "authors": ["Kartik Kuckreja", "Ximi Hoque", "Nishit Poddar", "Shukesh Reddy", "Abhinav Dhall", "Abhijit Das"],
+      "equal_contribution": [],
+      "venue": "IEEE FG 2024 (SD-FGA Workshop)",
+      "award": null,
+      "year": 2024,
+      "date": "2024-05-27",
+      "abstract": "A comprehensive synthetic face dataset focused on the Indian subcontinent, illuminating a regional deepfake landscape that mainstream datasets overlook.",
+      "thumbnail": "assets/img/paper-indiface.jpg",
+      "links": {
+        "paper": "https://ieeexplore.ieee.org/abstract/document/10582046"
+      },
+      "github_repo": null,
+      "hf_dataset": null,
+      "topics": ["deepfakes", "benchmark"],
+      "selected": false
+    },
+    {
+      "id": "geochat",
+      "arxiv": "2311.15826",
+      "title": "GeoChat: Grounded Large Vision-Language Model for Remote Sensing",
+      "authors": ["Kartik Kuckreja", "Muhammad Sohail Danish", "Muzammal Naseer", "Abhijit Das", "Salman Khan", "Fahad Shahbaz Khan"],
+      "equal_contribution": ["Kartik Kuckreja", "Muhammad Sohail Danish"],
+      "venue": "CVPR 2024",
+      "award": null,
+      "year": 2024,
+      "date": "2023-11-24",
+      "abstract": "The first grounded large vision-language model for remote sensing: GeoChat holds multi-task conversations about satellite imagery — region-level captioning, visual question answering, and grounded object detection.",
+      "thumbnail": "assets/img/paper-geochat.jpg",
+      "links": {
+        "paper": "https://arxiv.org/abs/2311.15826",
+        "code": "https://github.com/mbzuai-oryx/GeoChat"
+      },
+      "github_repo": "mbzuai-oryx/GeoChat",
+      "hf_dataset": "MBZUAI/GeoChat_Instruct",
+      "topics": ["earth-observation", "vision-language"],
+      "selected": true
+    }
+  ]
+}

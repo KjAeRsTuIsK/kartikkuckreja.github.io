@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>News — Kartik Kuckreja</title>
+  <meta name="description" content="News and updates from Kartik Kuckreja: paper acceptances, releases, and milestones.">
+  <link rel="canonical" href="https://kartikkuckreja.github.io/news.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="News — Kartik Kuckreja">
+  <meta property="og:description" content="Paper acceptances, releases, and milestones — the full log.">
+  <meta property="og:image" content="https://kartikkuckreja.github.io/assets/img/kartik.jpg">
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="14" y="14" width="72" height="72" fill="none" stroke="%230e6b3d" stroke-width="11"/><rect x="39" y="39" width="22" height="22" fill="%230e6b3d"/></svg>'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script>(function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark");})();</script>
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text">kartik.kuckreja</span></a>
+      <div class="nav-links">
+        <a href="/">home</a>
+        <a href="/publications.html">publications</a>
+        <a href="/research.html">research</a>
+        <a href="/news.html">news</a>
+        <a href="/about.html">about</a>
+      </div>
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <header class="section" style="padding-top:clamp(36px,6vw,70px)">
+      <p class="kicker">stdout</p>
+      <h1 style="font-size:clamp(2rem,5vw,3.2rem)">The log</h1>
+      <p class="muted" style="max-width:60ch">Acceptances, releases, and milestones — newest first.</p>
+    </header>
+
+    <div id="news-full" style="max-width:760px"></div>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-kernel" aria-hidden="true">
+            <span>0</span><span class="on">-1</span><span>0</span>
+            <span class="on">-1</span><span class="on">4</span><span class="on">-1</span>
+            <span>0</span><span class="on">-1</span><span>0</span>
+          </div>
+          <div class="mono small">kartik.kuckreja · computer vision</div>
+          <p class="foot-note">∇² — the Laplacian: how a machine first finds an edge.<br>© <span data-year></span> Kartik Kuckreja.</p>
+        </div>
+        <div class="foot-links">
+          <a href="/publications.html">publications</a>
+          <a href="/research.html">research</a>
+          <a href="/news.html">news</a>
+          <a href="/about.html">about</a>
+        </div>
+        <div class="foot-links">
+          <a href="mailto:kartikkuckreja456@gmail.com">email</a>
+          <a href="https://scholar.google.com/citations?user=9_RLvbIAAAAJ&hl=en" target="_blank" rel="noopener">google scholar</a>
+          <a href="https://github.com/KjAeRsTuIsK" target="_blank" rel="noopener">github</a>
+          <a href="https://www.linkedin.com/in/kartik-kuckreja-930531221/" target="_blank" rel="noopener">linkedin</a>
+        </div>
+        <div class="foot-links">
+          <span class="mono small muted">hand-built · no frameworks</span>
+          <span class="mono small muted">publications auto-sync from arXiv</span>
+          <a href="https://github.com/KjAeRsTuIsK/kartikkuckreja.github.io" target="_blank" rel="noopener">view source</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/site-data.js"></script>
+  <script>Site.renderNews("#news-full", { grouped: true });</script>
+</body>
+</html>

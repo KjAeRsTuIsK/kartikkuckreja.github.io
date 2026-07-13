@@ -1,317 +1,204 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kartik Kuckreja — Computer Vision Researcher</title>
+  <meta name="description" content="Kartik Kuckreja is a Research Engineer at MBZUAI working on vision–language models and synthetic media detection. Author of GeoChat (CVPR 2024), ArEnAV (ICLR 2026) and DeepfakeJudge (CVPR 2026).">
+  <meta name="author" content="Kartik Kuckreja">
+  <link rel="canonical" href="https://kartikkuckreja.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Kartik Kuckreja — Computer Vision Researcher">
+  <meta property="og:description" content="Vision–language models, deepfake forensics, and benchmarks that keep multimodal AI honest.">
+  <meta property="og:image" content="https://kartikkuckreja.github.io/assets/img/kartik.jpg">
+  <meta property="og:url" content="https://kartikkuckreja.github.io/">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href='data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect x="14" y="14" width="72" height="72" fill="none" stroke="%230e6b3d" stroke-width="11"/><rect x="39" y="39" width="22" height="22" fill="%230e6b3d"/></svg>'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script>/* pre-paint theme to avoid flash */(function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark");})();</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Kartik Kuckreja",
+    "url": "https://kartikkuckreja.github.io/",
+    "image": "https://kartikkuckreja.github.io/assets/img/kartik.jpg",
+    "jobTitle": "Research Engineer",
+    "worksFor": { "@type": "Organization", "name": "Mohamed bin Zayed University of Artificial Intelligence" },
+    "alumniOf": { "@type": "Organization", "name": "BITS Pilani, Hyderabad Campus" },
+    "email": "mailto:kartikkuckreja456@gmail.com",
+    "sameAs": [
+      "https://scholar.google.com/citations?user=9_RLvbIAAAAJ",
+      "https://github.com/KjAeRsTuIsK",
+      "https://www.linkedin.com/in/kartik-kuckreja-930531221/"
+    ]
+  }
+  </script>
+</head>
+<body>
 
-    <title>Kartik Kuckreja</title>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="/"><span class="brand-mark" aria-hidden="true"></span><span class="brand-text">kartik.kuckreja</span></a>
+      <div class="nav-links">
+        <a href="/">home</a>
+        <a href="/publications.html">publications</a>
+        <a href="/research.html">research</a>
+        <a href="/news.html">news</a>
+        <a href="/about.html">about</a>
+      </div>
+      <button class="theme-btn" onclick="toggleTheme()" aria-label="Toggle dark mode" title="Toggle theme">
+        <svg class="theme-icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="theme-icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </div>
+  </nav>
 
-    <meta name="author" content="Kartik Kuckreja">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <header class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <p class="kicker">Research Engineer · MBZUAI · Abu Dhabi</p>
+          <h1>Kartik <span class="accent">Kuckreja</span></h1>
+          <p class="hero-lede">
+            I build models that <em>see</em> — and study whether we can trust what they say they saw.
+            My work spans vision–language models, deepfake forensics, and the benchmarks that keep
+            multimodal AI honest. Currently at
+            <a href="https://mbzuai.ac.ae" target="_blank" rel="noopener">MBZUAI</a>, jointly advised by
+            <a href="https://m-haris-khan.com/" target="_blank" rel="noopener">Prof. Muhammad Haris Khan</a> and
+            <a href="https://research.monash.edu/en/persons/abhinav-dhall" target="_blank" rel="noopener">Prof. Abhinav Dhall</a> (Monash University).
+          </p>
+          <div class="hero-meta">
+            <a class="btn primary" href="mailto:kartikkuckreja456@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="m22 6-10 7L2 6"/></svg>
+              email</a>
+            <a class="btn" href="https://drive.google.com/file/d/1tTD3CrQFc-WdBaPHxdO0-97KBJF64jUa/view?usp=sharing" target="_blank" rel="noopener">cv</a>
+            <a class="btn" href="https://scholar.google.com/citations?user=9_RLvbIAAAAJ&hl=en" target="_blank" rel="noopener">scholar</a>
+            <a class="btn" href="https://github.com/KjAeRsTuIsK" target="_blank" rel="noopener">github</a>
+            <a class="btn" href="https://www.linkedin.com/in/kartik-kuckreja-930531221/" target="_blank" rel="noopener">linkedin</a>
+          </div>
+        </div>
+        <figure style="margin:0">
+          <div class="detect fid always">
+            <span class="detect-label">researcher · 0.994</span>
+            <img src="/assets/img/kartik.jpg" alt="Portrait of Kartik Kuckreja" width="720" height="960" fetchpriority="high">
+            <span class="detect-frame" aria-hidden="true"></span>
+          </div>
+          <figcaption class="mono small muted" style="text-align:center;margin-top:14px;font-size:.68rem">
+            fig. 1 — sobel(∇I) → portrait · hover to re-run
+          </figcaption>
+        </figure>
+      </div>
 
-    <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>">
-  </head>
+      <div class="banner reveal" style="margin-top:34px">
+        <span class="blabel">// status</span>
+        <span>Looking for <strong>PhD opportunities starting Fall 2026</strong> — if my research overlaps with your lab, I'd love to <a href="mailto:kartikkuckreja456@gmail.com">hear from you</a>.</span>
+      </div>
+    </div>
+  </header>
 
-  <body>
-    
-    <style>
-        body {
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-        footer {
-            margin-top: auto; /* Push footer to the bottom */
-            text-align: center; /* Center content horizontally */
-            background-color: #f9f9f9; /* Optional light background */
-            padding: 10px; /* Small padding for compact height */
-        }
-        footer a {
-            display: inline-block; /* Ensure the link is treated as an inline-block element */
-            text-decoration: none; /* Remove underline from link */
-        }
-        footer img {
-            max-width: 200px; /* Limit the image width */
-            height: auto; /* Maintain aspect ratio */
-        }
-    </style>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Kartik Kuckreja
-                </p>
-                  <p>
-                  <font size="3" style="text-align: justify;">Hi! I am a Research Engineer at <a href="https://mbzuai.ac.ae" target="_blank"><font size="3"> Mohamed bin Zayed University of Artificial Intelligence (MBZUAI)</font></a>, jointly advised by <a href="https://m-haris-khan.com/" target="_blank"><font size="3">Prof. Muhammad Haris Khan</font></a> and <a href="" target="_blank"><font size="3">Prof. Abhinav Dhall (Monash University)</font></a>.
-                </p>
-                <p>
-                  <font size="3"> I recently completed my undergrad from <a href="https://www.bits-pilani.ac.in/hyderabad/" target="_blank"><font size="3"> Birla Institute of Technology and Sciences, Pilani (BITS-Pilani)</font></a> in Computer Science. I had the privilege of completing my Undergraduate Thesis (GeoChat) under the guidance of <a href="https://sites.google.com/view/fahadkhans/home?pli=1" target="_blank"><font size="3">Prof. Fahad Khan</font></a>, <a href="https://salman-h-khan.github.io/" target="_blank"><font size="3">Dr. Salman Khan</font></a> and <a href="https://sites.google.com/site/dasabhijit2048/home" target="_blank"><font size="3">Dr. Abhijit Das</font></a>. Before this, I worked as a Summer Research Intern at IIT Ropar, with <a href="https://sites.google.com/site/dhallabhinav/abhinav-dhall-phd" target="_blank"><font size="3">Dr. Abhinav Dhall</font></a>.
-                  <br><br>
-                </p>
-                <p>
-                  
-                </p>
+  <div class="wrap">
+    <div class="statusline reveal">
+      <span>LOC&nbsp;<b>Abu Dhabi, UAE</b></span>
+      <span>PAPERS&nbsp;<b id="stat-papers">9</b></span>
+      <span>GITHUB STARS&nbsp;<b id="stat-stars">—</b></span>
+      <span>NEXT STOP&nbsp;<b>PhD, Fall 2026</b>&nbsp;<span class="dot">●</span></span>
+    </div>
+  </div>
 
-                </p>
-                
-                <p style="text-align:center">
-                  <a href="mailto:kartikkuckreja456@gmail.com"> <font size="3">Email</font></a> &nbsp;/&nbsp;
-                  <a href="https://drive.google.com/file/d/1tTD3CrQFc-WdBaPHxdO0-97KBJF64jUa/view?usp=sharing" target="_blank"> <font size="3">CV</font></a> &nbsp;/&nbsp;
-                  <a href="https://scholar.google.com/citations?user=9_RLvbIAAAAJ&hl=en"><font size="3">Google Scholar</font></a> &nbsp;/&nbsp;
-                  <a href="https://www.linkedin.com/in/kartik-kuckreja-930531221/" target="_blank"><font size="3">LinkedIn</font></a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:40%;max-width:40%">
-                <a href="kartik2.jpeg"><img style="width:100%;max-width:100%" alt="profile photo" src="kartik2.jpeg" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
+  <main class="wrap">
 
-          
+    <section class="section" id="selected">
+      <div class="section-head reveal">
+        <span class="figno">FIG. 02</span>
+        <h2>Selected work</h2>
+        <a class="more" href="/publications.html">all publications</a>
+      </div>
+      <div id="pubs-selected"></div>
+    </section>
 
-            <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle;text-align:justify;"">
-                <h2><font size="5" style="font-weight:bold;"> Research Interests</h2>  </font>
-                  <font size="3"> I mostly work in the intersection of Deep Learning and Computer Vision, particularly involving Generative AI. Currently working on interpretable/explainable foundational models for synthetic media detection. Earlier, I worked on Vision Language Models for Earth Observation, Long Movie Understanding, and Deepfakes.
-              </td>
-            </tr>
-          </tbody></table>
+    <section class="section" id="focus">
+      <div class="section-head reveal">
+        <span class="figno">FIG. 03</span>
+        <h2>Research focus</h2>
+        <a class="more" href="/research.html">full picture</a>
+      </div>
+      <div class="topic-grid">
+        <div class="topic card fid reveal">
+          <div class="t-kernel" aria-hidden="true"><span></span><span class="on"></span><span></span><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span class="on"></span><span></span></div>
+          <h3>Synthetic media forensics</h3>
+          <p>Detecting deepfakes — and making detectors explain themselves. Datasets and judges for trustworthy, grounded reasoning about manipulated media.</p>
+          <a class="chip" href="/publications.html?topic=deepfakes">related papers</a>
+        </div>
+        <div class="topic card fid reveal">
+          <div class="t-kernel" aria-hidden="true"><span class="on"></span><span></span><span class="on"></span><span></span><span class="on"></span><span></span><span class="on"></span><span></span><span class="on"></span></div>
+          <h3>Vision–language models</h3>
+          <p>Grounded multimodal models that point at what they talk about — from satellite imagery (GeoChat) to child-view video.</p>
+          <a class="chip" href="/publications.html?topic=vision-language">related papers</a>
+        </div>
+        <div class="topic card fid reveal">
+          <div class="t-kernel" aria-hidden="true"><span class="on"></span><span class="on"></span><span class="on"></span><span></span><span class="on"></span><span></span><span></span><span class="on"></span><span></span></div>
+          <h3>Benchmarks that bite</h3>
+          <p>Evaluations models can't shortcut: 100-language cultural coverage, geospatial reasoning, million-scale audio-visual deepfakes.</p>
+          <a class="chip" href="/publications.html?topic=benchmark">related papers</a>
+        </div>
+      </div>
+    </section>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr>
-            <td style="padding:20px;width:100%;vertical-align:middle">
-              <h2 style="font-weight: bold;"><font size="5">News</h2>
-              <!-- <ul> -->              
-                <font size="3"><li>[February 2026] - <a href="https://arxiv.org/abs/2505.22581" target="_blank"><font size="3">DeepfakeJudge</font></a> accepted at CVPR-2026! 
-                <font size="3"><li>[January 2026] - <a href="https://arxiv.org/abs/2505.22581" target="_blank"><font size="3">ArEnAV</font></a> accepted at ICLR-2026! 
-                <font size="3"><li>[December 2025] - Looking for PhD oppurtunities, starting Fall-2026.
-                <font size="3"><li>[February 2025] - Joined Prof. Haris and Prof. Abhinav Dhall as Research Engineer at <a href="https://mbzuai.ac.ae" target="_blank"><font size="3">MBZUAI</font></a>.
-                <!-- <font size="3"><li>[February 2025] - Joined Prof. Haris and Prof. Abhinav Dhall as Research Associate-II at <a href="https://mbzuai.ac.ae" target="_blank"><font size="3">MBZUAI</font></a>. -->
-<!--                 <font size="3"><li>[July 2024] - Joined Prof. Ivan Laptev and Dr. Makarand Tapaswi as Research Associate-I at <a href="https://mbzuai.ac.ae" target="_blank"><font size="3">MBZUAI</font></a>. -->
-                <font size="3"><li>[June 2024] - Attending <a href="https://cvpr.thecvf.com/Conferences/2024" target="_blank"><font size="3">CVPR-24</a> in Seattle, USA 🥳🥳.
-                <font size="3"><li>[June 2024] - Graduated from BITS-Pilani, Hyderabad Campus 🥳🥳.
-                <font size="3"><li>[May 2024] - <a href="https://ieeexplore.ieee.org/abstract/document/10582046" target="_blank"><font size="3">INDIFACE</a> accepted to <a href="https://sites.google.com/view/sd-fga2024/" target="_blank"><font size="3">IEEE-FG Workshop</a> 🎉🎉.
-                <font size="3"><li>[March 2024] - Geochat accepted at <a href="https://cvpr.thecvf.com/Conferences/2024" target="_blank"><font size="3">CVPR-24</a> 🎉🎉.
-                <font size="3"><li>[Nov 2023] - Released <a href="https://github.com/mbzuai-oryx/GeoChat" target="_blank"><font size="3">GeoChat</a> :)</li>
-                <font size="3"><li>[June 2023] - Joined <a href="https://www.ival-mbzuai.com/about" target="_blank"><font size="3">MBZUAI</a> as a Research Assistant.</li>
-                <font size="3"><li>[June 2022] - Joined <a href="https://www.iitrpr.ac.in/lasii/index.html" target="_blank"><font size="3">LASII Lab</a> at IIT Ropar as a Summer Research Intern.</li>
-                  
-            </td>
-          </tr>
-        </tbody></table>
-          
+    <section class="section" id="news">
+      <div class="section-head reveal">
+        <span class="figno">FIG. 04</span>
+        <h2>Recent news</h2>
+        <a class="more" href="/news.html">full log</a>
+      </div>
+      <div id="news-recent"></div>
+    </section>
 
+  </main>
 
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:20px;width:100%;vertical-align:middle">
-                <h2 style="font-weight: bold;"><font size="5"> Publications</h2> </font>
-                <p>* <font size="3"> denotes joint first authors</p>
-              </td>
-            </tr>
-          </tbody></table>
-          
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <footer class="site">
+    <div class="wrap">
+      <div class="foot-grid">
+        <div>
+          <div class="foot-kernel" aria-hidden="true">
+            <span>0</span><span class="on">-1</span><span>0</span>
+            <span class="on">-1</span><span class="on">4</span><span class="on">-1</span>
+            <span>0</span><span class="on">-1</span><span>0</span>
+          </div>
+          <div class="mono small">kartik.kuckreja · computer vision</div>
+          <p class="foot-note">∇² — the Laplacian: how a machine first finds an edge.<br>© <span data-year></span> Kartik Kuckreja.</p>
+        </div>
+        <div class="foot-links">
+          <a href="/publications.html">publications</a>
+          <a href="/research.html">research</a>
+          <a href="/news.html">news</a>
+          <a href="/about.html">about</a>
+        </div>
+        <div class="foot-links">
+          <a href="mailto:kartikkuckreja456@gmail.com">email</a>
+          <a href="https://scholar.google.com/citations?user=9_RLvbIAAAAJ&hl=en" target="_blank" rel="noopener">google scholar</a>
+          <a href="https://github.com/KjAeRsTuIsK" target="_blank" rel="noopener">github</a>
+          <a href="https://www.linkedin.com/in/kartik-kuckreja-930531221/" target="_blank" rel="noopener">linkedin</a>
+        </div>
+        <div class="foot-links">
+          <span class="mono small muted">hand-built · no frameworks</span>
+          <span class="mono small muted">publications auto-sync from arXiv</span>
+          <a href="https://github.com/KjAeRsTuIsK/kartikkuckreja.github.io" target="_blank" rel="noopener">view source</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-          <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle;">
-            <img src="website_teaser.png" alt="indiface" width="220" height="130">
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle;text-align: justify;">
-            </a>
-              <span class="papertitle"><font size="3">Pixels Don’t Lie (But Your Detector Might): Bootstrapping MLLM-as-a-Judge for Trustworthy Deepfake Detection and Reasoning Supervision</span>
-            </a>
-            <br>
-              
-            <strong><a href="https://scholar.google.com/citations?user=a8yxkD0AAAAJ&hl=en"><font size="3">Kartik Kuckreja</font></a></strong>,     
-            <a href="https://scholar.google.com.au/citations?user=Wik3mXsAAAAJ&hl=en" target="_blank"><font size="3">Parul Gupta</font></a>,
-            <a href="https://m-haris-khan.com/" target="_blank"><font size="3">Muhammad Haris Khan</font></a>
-            <a href="https://research.monash.edu/en/persons/abhinav-dhall" target="_blank"><font size="3">Abhinav Dhall</font></a>,
-<!--             <a href="https://www.servicenow.com/research/author/alexandre-lacoste.html" target="_blank"><font size="3">Alexandre Lacoste</font></a>, -->
-<!--             <a href="https://salman-h-khan.github.io/" target="_blank"><font size="3">Salman Khan</font></a> -->
-
-            <br>
-            <em><font size="3">CVPR-2026</em>
-            <br>
-            <a href="https://github.com/KjAeRsTuIsK/DeepfakeJudge" target="_blank"><font size="3">Code</font></a>
-            /
-            <a href="https://arxiv.org/html/2602.19715v1" target="_blank"><font size="3">Paper</font></a>
-            <p></p>
-          </td>
-        </tr>
-          <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle;">
-            <img src="logo.png" alt="indiface" width="220" height="130">
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle;text-align: justify;">
-            </a>
-              <span class="papertitle"><font size="3">Tell me Habibi, is it Real or Fake?</span>
-            </a>
-            <br>
-              
-            <strong><a href="https://scholar.google.com/citations?user=a8yxkD0AAAAJ&hl=en"><font size="3">Kartik Kuckreja</font></a></strong>,     
-            <a href="https://scholar.google.com.au/citations?user=Wik3mXsAAAAJ&hl=en" target="_blank"><font size="3">Parul Gupta</font></a>,
-            <a href="https://scholar.google.com/citations?user=N_RhXusAAAAJ&hl=en" target="_blank"><font size="3">Injy Hamed</font></a>,
-            <a href="http://solorio.uh.edu/" target="_blank"><font size="3">Thamar Solorio</font></a>,
-<!--             <strong><font size="3">Kartik Kuckreja</font></strong>, -->
-            <a href="https://m-haris-khan.com/" target="_blank"><font size="3">Muhammad Haris Khan</font></a>
-            <a href="https://research.monash.edu/en/persons/abhinav-dhall" target="_blank"><font size="3">Abhinav Dhall</font></a>,
-<!--             <a href="https://www.servicenow.com/research/author/alexandre-lacoste.html" target="_blank"><font size="3">Alexandre Lacoste</font></a>, -->
-<!--             <a href="https://salman-h-khan.github.io/" target="_blank"><font size="3">Salman Khan</font></a> -->
-
-            <br>
-            <em><font size="3">ICLR-2026</em>
-            <br>
-            <a href="https://github.com/KjAeRsTuIsK/ArEnAV" target="_blank"><font size="3">Code</font></a>
-            /
-            <a href="https://huggingface.co/datasets/kartik060702/ArEnAV-Full" target="_blank"><font size="3">Dataset</font></a>
-            /
-            <a href="https://arxiv.org/abs/2505.22581" target="_blank"><font size="3">Paper</font></a>
-            <p></p>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle;">
-            <img src="architecture.png" alt="Geochat" width="220" height="130">
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle;text-align: justify;">
-            </a>
-              <span class="papertitle"><font size="3">GeoChat: Grounded Large Vision-Language Model for Remote Sensing</span>
-            </a>
-            <br>
-            <strong><font size="3">Kartik Kuckreja*</font></strong>,
-            <a href="https://scholar.google.com/citations?user=a8yxkD0AAAAJ&hl=en"><font size="3">Mohammad Sohail Danish*</font></a>,
-            <a href="https://muzammal-naseer.com/" target="_blank"><font size="3">Muzammal Naseer</font></a>,
-            <a href="https://salman-h-khan.github.io/" target="_blank"><font size="3">Salman Khan</font></a>,
-            <a href="https://sites.google.com/site/dasabhijit2048/home" target="_blank"><font size="3">Abhijit Das</font></a>,
-            <a href="https://sites.google.com/view/fahadkhans/home?pli=1" target="_blank"><font size="3">Fahad Shahbaz Khan</font></a>
-            <br>
-            <em><font size="3">Computer Vision and Pattern Recognition-2024</em>
-            <br>
-            <a href="https://github.com/mbzuai-oryx/GeoChat" target="_blank"><font size="3">Code</font></a>
-            /
-            <a href="https://arxiv.org/abs/2311.15826" target="_blank"><font size="3">Paper</font></a>
-            <p></p>
-          </td>
-        </tr>
-
-        <!-- (Submitted CVPR 2024): Efficient 3D-Aware Facial Image Editing via Attribute-Specific Prompt Learning  -->
-        <!-- <tr bgcolor="#ffffd0"> -->
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle;">
-            <img src="Cross-Roc_new.jpg" alt="indiface" width="220" height="130">
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle;text-align: justify;">
-            </a>
-              <span class="papertitle"><font size="3">INDIFACE: Illuminating India's Deepfake Landscape with a Comprehensive Synthetic Dataset</span>
-            </a>
-            <br>
-            <strong><font size="3">Kartik Kuckreja</font></strong>,
-            <a href="https://scholar.google.co.in/citations?user=MNYVpQgAAAAJ&hl=en" target="_blank"><font size="3">Ximi Hoque</font></a>,
-            <a href="https://scholar.google.com/citations?user=HAburnkAAAAJ&hl=en" target="_blank"><font size="3">Nishit Poddar</font></a>,
-            <a href="https://scholar.google.com/citations?user=S6RK4N4AAAAJ&hl=en" target="_blank"><font size="3">Shukesh Reddy</font></a>,
-            <a href="https://sites.google.com/site/dhallabhinav/abhinav-dhall-phd" target="_blank"><font size="3">Abhinav Dhall</font></a>,
-            <a href="https://sites.google.com/site/dasabhijit2048/home" target="_blank"><font size="3">Abhijit Das</font></a>
-
-            <br>
-            <em><font size="3">FG-24 SDFGA</em>
-            <br>
-            <a href="https://ieeexplore.ieee.org/abstract/document/10582046" target="_blank"><font size="3">Paper</font></a>
-            <p></p>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle;">
-            <img src="ALMFigure.jpg" alt="indiface" width="220" height="130">
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle;text-align: justify;">
-            </a>
-              <span class="papertitle"><font size="3">All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages</span>
-            </a>
-            <br>
-            <a href="https://ashmalvayani.github.io/" target="_blank"><font size="3">Ashmal Vayani</font></a>,
-            <a href="https://scholar.google.com/citations?user=HVIV99gAAAAJ&hl=en" target="_blank"><font size="3">Dinura Dissanayake</font></a>,
-            <strong><font size="3">Kartik Kuckreja</font></strong>,
-            <a <font size="3"> Multiple Authors..</font></a>
-
-            <br>
-            <em><font size="3">CVPR-25 Highlight 🌟</em>
-            <br>
-             <a href="https://github.com/mbzuai-oryx/ALM-Bench" target="_blank"><font size="3">Code</font></a>
-            /
-            <a href="https://arxiv.org/abs/2411.16508" target="_blank"><font size="3">Paper</font></a>
-            <p></p>
-          </td>
-        </tr>
-
-          <tr>
-          <td style="padding:20px;width:25%;vertical-align:middle;">
-            <img src="teaser_bench.jpg" alt="indiface" width="220" height="130">
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle;text-align: justify;">
-            </a>
-              <span class="papertitle"><font size="3">GEOBench-VLM: Benchmarking Vision-Language Models for Geospatial Tasks
-</span>
-            </a>
-            <br>
-            <a href="https://scholar.google.com/citations?user=a8yxkD0AAAAJ&hl=en"><font size="3">Mohammad Sohail Danish*</font></a>,     
-            <a href="https://akhtarvision.github.io/" target="_blank"><font size="3">Akhtar Munir*</font></a>,
-            <a href="https://www.linkedin.com/in/syed-roshaan-ali-shah-b797b44a/" target="_blank"><font size="3">Syed Roshaan</font></a>,
-            <strong><font size="3">Kartik Kuckreja</font></strong>,
-            <a href="https://sites.google.com/view/fahadkhans/home?pli=1" target="_blank"><font size="3">Fahad Shahbaz Khan</font></a>
-            <a href="https://research.ibm.com/people/paolo-fraccaro" target="_blank"><font size="3">Paolo Fraccaro</font></a>,
-            <a href="https://www.servicenow.com/research/author/alexandre-lacoste.html" target="_blank"><font size="3">Alexandre Lacoste</font></a>,
-            <a href="https://salman-h-khan.github.io/" target="_blank"><font size="3">Salman Khan</font></a>
-
-            <br>
-            <em><font size="3">ICCV-25 Highlight 🌟</em>
-            <br>
-            <a href="https://github.com/The-AI-Alliance/GEO-Bench-VLM" target="_blank"><font size="3">Code</font></a>
-            /
-            <a href="https://arxiv.org/abs/2411.19325" target="_blank"><font size="3">Paper</font></a>
-            <p></p>
-          </td>
-        </tr>
-
-    </tbody>
-  </table>
-</tbody></table>
-
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-            <td style="padding:0px">
-                <br>
-                <!-- <p style="text-align:center;font-size:small;">
-                  Source code from <a href="https://github.com/jonbarron/jonbarron_website">Jon Barron's website</a>. 
-                </p> -->
-            </td>
-        </tr>
-    </tbody></table>
-        
-        </td>
-      </tr>
-    </table>
-<!--    <footer style="text-align: center; background-color: #f9f9f9; padding: 20px;"> -->
-<!--     <footer>
-        <div id="clustrmaps-container"></div>
-        <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=VEl6Lzc3EaQ6Q40NtdiE4DNO0cseBQsoEMLGzJuSiv8&cl=ffffff&w=a"></script>
-    </footer> -->
-                      <footer>
-        <a href="https://clustrmaps.com/site/1c3c7" title="ClustrMaps">
-            <img src="//www.clustrmaps.com/map_v2.png?d=VEl6Lzc3EaQ6Q40NtdiE4DNO0cseBQsoEMLGzJuSiv8&cl=ffffff" alt="ClustrMaps" />
-        </a>
-    </footer>
-
-</style>
-
-
-<!--     <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=VEl6Lzc3EaQ6Q40NtdiE4DNO0cseBQsoEMLGzJuSiv8&cl=ffffff&w=a"></script> -->
-<!--     <a href="https://clustrmaps.com/site/1c3c7" title="ClustrMaps"><img src="//www.clustrmaps.com/map_v2.png?d=VEl6Lzc3EaQ6Q40NtdiE4DNO0cseBQsoEMLGzJuSiv8&cl=ffffff"></a> -->
-  </body>
+  <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/site-data.js"></script>
+  <script src="/assets/js/hero.js"></script>
+  <script>
+    Site.renderPubs("#pubs-selected", { selectedOnly: true });
+    Site.renderNews("#news-recent", { limit: 6 });
+    Site.fillTotalStars();
+  </script>
+</body>
 </html>
