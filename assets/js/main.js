@@ -13,12 +13,11 @@
     document.dispatchEvent(new CustomEvent("themechange"));
   };
 
-  // ----- current nav link -----
-  const here = location.pathname.replace(/\/$/, "") || "/";
+  // ----- current nav link (filename-based so it works under any base path) -----
+  const seg = (p) => p.split("/").pop() || "index.html";
+  const here = seg(location.pathname);
   document.querySelectorAll(".nav-links a").forEach((a) => {
-    const path = new URL(a.href, location.origin).pathname.replace(/\/$/, "") || "/";
-    const match = path === here || (path === "/index.html" && here === "/") || (here === "/index.html" && path === "/");
-    if (match) a.setAttribute("aria-current", "page");
+    if (seg(new URL(a.href, location.href).pathname) === here) a.setAttribute("aria-current", "page");
   });
 
   // ----- reveal on scroll -----

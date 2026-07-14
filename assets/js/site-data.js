@@ -167,13 +167,13 @@
   }
 
   // ---------- renderers ----------
-  const DATA_V = "?v=5";
+  const DATA_V = "?v=6";
   async function getData() {
-    if (!window.__pubData) window.__pubData = fetch("/assets/data/publications.json" + DATA_V).then((r) => r.json());
+    if (!window.__pubData) window.__pubData = fetch("assets/data/publications.json" + DATA_V).then((r) => r.json());
     return window.__pubData;
   }
   async function getNews() {
-    if (!window.__newsData) window.__newsData = fetch("/assets/data/news.json" + DATA_V).then((r) => r.json());
+    if (!window.__newsData) window.__newsData = fetch("assets/data/news.json" + DATA_V).then((r) => r.json());
     return window.__newsData;
   }
 
