@@ -37,6 +37,17 @@
     });
   }, 1500);
 
+  // ----- external links always open in a new tab -----
+  // Delegated so it also covers links rendered later from JSON.
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest && e.target.closest("a[href]");
+    if (!a) return;
+    if (/^https?:/.test(a.href) && a.origin !== location.origin) {
+      a.target = "_blank";
+      a.rel = "noopener";
+    }
+  });
+
   // ----- footer year -----
   document.querySelectorAll("[data-year]").forEach((el) => (el.textContent = new Date().getFullYear()));
 })();
