@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css?v=3">
   <script>(function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark");})();</script>
 </head>
 <body>
@@ -39,12 +39,6 @@
   <main class="wrap">
     <header class="section" style="padding-top:clamp(36px,6vw,70px)">
       <h1>Publications</h1>
-      <p class="muted" style="max-width:62ch">
-        Newest first. This list is stored as structured data and
-        <a href="https://github.com/KjAeRsTuIsK/kartikkuckreja.github.io/blob/main/.github/workflows/update-publications.yml" target="_blank" rel="noopener">updated automatically</a>
-        when a new preprint with my name appears on arXiv. Repository stars and dataset downloads
-        are fetched live from GitHub and Hugging&nbsp;Face.
-      </p>
       <p class="mono small muted">* denotes equal contribution</p>
     </header>
 
@@ -87,8 +81,8 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/site-data.js"></script>
+  <script src="/assets/js/main.js?v=3"></script>
+  <script src="/assets/js/site-data.js?v=3"></script>
   <script>
     Site.renderPubs("#pubs-all").then(function () {
       Site.setupFilters("#pubs-all", "#pub-filters");

@@ -37,10 +37,12 @@
       "abstract": "As deepfake detection models increasingly produce natural language explanations, their reasoning often remains weakly grounded in visual artifacts, limiting reliability and user trust. XPlainVerse is a million-scale benchmark for evaluating whether explanations reflect the actual manipulations present in synthetic media.",
       "thumbnail": null,
       "links": {
-        "paper": "https://arxiv.org/abs/2607.03562"
+        "paper": "https://arxiv.org/abs/2607.03562",
+        "code": "https://github.com/Abhijeet8901/XPlainVerse-ACMChallenge",
+        "dataset": "https://huggingface.co/datasets/Abhijeet8901/XPlainVerse"
       },
-      "github_repo": null,
-      "hf_dataset": null,
+      "github_repo": "Abhijeet8901/XPlainVerse-ACMChallenge",
+      "hf_dataset": "Abhijeet8901/XPlainVerse",
       "topics": ["deepfakes", "explainability"],
       "selected": true
     },
@@ -144,10 +146,11 @@
       "thumbnail": "assets/img/paper-geobench.jpg",
       "links": {
         "paper": "https://arxiv.org/abs/2411.19325",
-        "code": "https://github.com/The-AI-Alliance/GEO-Bench-VLM"
+        "code": "https://github.com/The-AI-Alliance/GEO-Bench-VLM",
+        "dataset": "https://huggingface.co/datasets/aialliance/GEOBench-VLM"
       },
       "github_repo": "The-AI-Alliance/GEO-Bench-VLM",
-      "hf_dataset": null,
+      "hf_dataset": "aialliance/GEOBench-VLM",
       "topics": ["earth-observation", "vision-language", "benchmark"],
       "selected": false
     },
@@ -209,9 +212,12 @@
       "thumbnail": "assets/img/paper-geochat.jpg",
       "links": {
         "paper": "https://arxiv.org/abs/2311.15826",
-        "code": "https://github.com/mbzuai-oryx/GeoChat"
+        "code": "https://github.com/mbzuai-oryx/GeoChat",
+        "model": "https://huggingface.co/MBZUAI/geochat-7B",
+        "dataset": "https://huggingface.co/datasets/MBZUAI/GeoChat_Instruct"
       },
       "github_repo": "mbzuai-oryx/GeoChat",
+      "hf_model": "MBZUAI/geochat-7B",
       "hf_dataset": "MBZUAI/GeoChat_Instruct",
       "topics": ["earth-observation", "vision-language"],
       "selected": true

@@ -8,6 +8,7 @@
     paper: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg>',
     code: '<svg viewBox="0 0 16 16" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>',
     dataset: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>',
+    model: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><path d="M3.27 6.96 12 12.01l8.73-5.05M12 22.08V12"/></svg>',
     project: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>',
     star: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>',
     dl: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>',
@@ -90,13 +91,13 @@
       el.title = repo + " on GitHub";
     } catch (e) { el.innerHTML = `${ICONS.star}stars`; }
   }
-  async function fillHF(el, ds) {
+  async function fillHF(el, id, kind, label) {
     try {
-      const d = await cachedFetch("hf2:" + ds, "https://huggingface.co/api/datasets/" + encodeURI(ds) + "?expand[]=downloads&expand[]=downloadsAllTime");
+      const d = await cachedFetch("hf2:" + kind + ":" + id, "https://huggingface.co/api/" + kind + "/" + encodeURI(id) + "?expand[]=downloads&expand[]=downloadsAllTime");
       const n = d.downloadsAllTime ?? d.downloads;
       if (n == null) throw 0;
-      el.innerHTML = `${ICONS.dl}<b>${fmt(n)}</b>&nbsp;downloads`;
-      el.title = ds + " on Hugging Face — total downloads";
+      el.innerHTML = `${ICONS.dl}<b>${fmt(n)}</b>&nbsp;${label}`;
+      el.title = id + " on Hugging Face — total downloads";
     } catch (e) { el.style.display = "none"; }
   }
 
@@ -117,10 +118,13 @@
     const linkChips = [];
     if (pub.links.paper) linkChips.push(`<a class="chip" href="${esc(pub.links.paper)}" target="_blank" rel="noopener">${ICONS.paper}${pub.arxiv ? "arXiv" : "paper"}</a>`);
     if (pub.links.code) linkChips.push(`<a class="chip" href="${esc(pub.links.code)}" target="_blank" rel="noopener">${ICONS.code}code</a>`);
+    if (pub.links.model) linkChips.push(`<a class="chip" href="${esc(pub.links.model)}" target="_blank" rel="noopener">${ICONS.model}model</a>`);
     if (pub.links.dataset) linkChips.push(`<a class="chip" href="${esc(pub.links.dataset)}" target="_blank" rel="noopener">${ICONS.dataset}dataset</a>`);
     if (pub.links.project) linkChips.push(`<a class="chip" href="${esc(pub.links.project)}" target="_blank" rel="noopener">${ICONS.project}project</a>`);
     const gh = pub.github_repo ? `<a class="chip stat" data-gh="${esc(pub.github_repo)}" href="https://github.com/${esc(pub.github_repo)}" target="_blank" rel="noopener">${ICONS.star}…</a>` : "";
+    const both = pub.hf_dataset && pub.hf_model;
     const hf = pub.hf_dataset ? `<a class="chip stat" data-hf="${esc(pub.hf_dataset)}" href="https://huggingface.co/datasets/${esc(pub.hf_dataset)}" target="_blank" rel="noopener">${ICONS.dl}…</a>` : "";
+    const hfm = pub.hf_model ? `<a class="chip stat" data-hfm="${esc(pub.hf_model)}" href="https://huggingface.co/${esc(pub.hf_model)}" target="_blank" rel="noopener">${ICONS.dl}…</a>` : "";
 
     el.innerHTML = `
       <div class="pub-thumb">${thumb}</div>
@@ -133,7 +137,7 @@
         <p class="pub-authors">${authorLine(pub, links)}</p>
         <p class="pub-abstract">${esc(pub.abstract || "")}</p>
         <div class="chips">
-          ${linkChips.join("")}${gh}${hf}
+          ${linkChips.join("")}${gh}${hf}${hfm}
           ${pub.abstract ? `<button class="chip" data-abs>abstract</button>` : ""}
           <button class="chip" data-bib>${ICONS.bib}BibTeX</button>
         </div>
@@ -148,7 +152,8 @@
       document.addEventListener("themechange", () => drawProceduralThumb(proc, pub));
     }
     const ghEl = el.querySelector("[data-gh]"); if (ghEl) fillGithub(ghEl, pub.github_repo);
-    const hfEl = el.querySelector("[data-hf]"); if (hfEl) fillHF(hfEl, pub.hf_dataset);
+    const hfEl = el.querySelector("[data-hf]"); if (hfEl) fillHF(hfEl, pub.hf_dataset, "datasets", both ? "dataset downloads" : "downloads");
+    const hfmEl = el.querySelector("[data-hfm]"); if (hfmEl) fillHF(hfmEl, pub.hf_model, "models", both ? "model downloads" : "downloads");
     const absBtn = el.querySelector("[data-abs]");
     if (absBtn) absBtn.addEventListener("click", () => el.classList.toggle("open"));
     el.querySelector("[data-bib]").addEventListener("click", () => el.classList.toggle("bib-open"));
@@ -162,12 +167,13 @@
   }
 
   // ---------- renderers ----------
+  const DATA_V = "?v=3";
   async function getData() {
-    if (!window.__pubData) window.__pubData = fetch("/assets/data/publications.json").then((r) => r.json());
+    if (!window.__pubData) window.__pubData = fetch("/assets/data/publications.json" + DATA_V).then((r) => r.json());
     return window.__pubData;
   }
   async function getNews() {
-    if (!window.__newsData) window.__newsData = fetch("/assets/data/news.json").then((r) => r.json());
+    if (!window.__newsData) window.__newsData = fetch("/assets/data/news.json" + DATA_V).then((r) => r.json());
     return window.__newsData;
   }
 
@@ -238,5 +244,18 @@
     if (window.observeReveals) window.observeReveals(host);
   }
 
-  window.Site = { renderPubs, renderNews, setupFilters };
+  // total stars across every repo linked from the publications list
+  async function fillTotalStars(sel) {
+    const el = document.querySelector(sel);
+    if (!el) return;
+    try {
+      const data = await getData();
+      const repos = [...new Set(data.publications.map((p) => p.github_repo).filter(Boolean))];
+      const counts = await Promise.all(repos.map((r) => cachedFetch("gh:" + r, "https://api.github.com/repos/" + r).then((d) => d.stargazers_count).catch(() => 0)));
+      const total = counts.reduce((a, b) => a + b, 0);
+      if (total > 0) el.textContent = fmt(total);
+    } catch (e) { /* leave placeholder */ }
+  }
+
+  window.Site = { renderPubs, renderNews, setupFilters, fillTotalStars };
 })();

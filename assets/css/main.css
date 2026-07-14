@@ -190,6 +190,37 @@ h3 { font-size: 1.16rem; }
   border-radius: 2px;
 }
 
+/* ---------- game-of-life strip ---------- */
+.life-wrap {
+  position: relative;
+  margin-top: 36px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper-raise);
+  overflow: hidden;
+  cursor: crosshair;
+}
+.life-wrap canvas { display: block; width: 100%; }
+.life-hint {
+  position: absolute; right: 10px; bottom: 6px;
+  font-size: .62rem; letter-spacing: .06em;
+  color: var(--ink-faint);
+  pointer-events: none;
+  background: color-mix(in srgb, var(--paper-raise) 78%, transparent);
+  padding: 1px 6px; border-radius: 2px;
+}
+
+/* hero stat line */
+.hero-stat {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin-top: 20px;
+  font-family: var(--mono); font-size: .76rem;
+  color: var(--ink-soft); text-decoration: none;
+}
+.hero-stat svg { width: 13px; height: 13px; color: var(--amber); flex: none; }
+.hero-stat b { color: var(--ink); }
+.hero-stat:hover { color: var(--accent-ink); }
+
 /* ---------- turing-tape divider ---------- */
 .tape { display: flex; margin: 36px 0 0; max-width: 100%; overflow: hidden; }
 .tape span {

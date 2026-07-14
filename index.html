@@ -17,7 +17,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css?v=3">
   <script>/* pre-paint theme to avoid flash */(function(){var t=localStorage.getItem("theme");if(t==="dark"||(!t&&matchMedia("(prefers-color-scheme: dark)").matches))document.documentElement.setAttribute("data-theme","dark");})();</script>
   <script type="application/ld+json">
   {
@@ -84,13 +84,18 @@
             <a class="btn" href="https://github.com/KjAeRsTuIsK" target="_blank" rel="noopener">github</a>
             <a class="btn" href="https://www.linkedin.com/in/kartik-kuckreja-930531221/" target="_blank" rel="noopener">linkedin</a>
           </div>
+          <a class="hero-stat" href="https://github.com/KjAeRsTuIsK" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+            <b id="stat-stars">—</b>&nbsp;GitHub stars across project repositories
+          </a>
         </div>
         <div class="portrait">
           <img src="/assets/img/kartik.jpg" alt="Portrait of Kartik Kuckreja" width="720" height="960" fetchpriority="high">
         </div>
       </div>
-      <div class="tape" aria-hidden="true">
-        <span>0</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span><span>0</span><span class="head">1</span><span>1</span><span>0</span><span>1</span><span>1</span><span>0</span><span>0</span><span>1</span><span>0</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span><span>0</span><span>1</span><span>1</span><span>0</span><span>1</span><span>0</span><span>1</span>
+      <div class="life-wrap" aria-hidden="true">
+        <canvas id="life"></canvas>
+        <span class="life-hint mono">conway's game of life — draw with your cursor</span>
       </div>
     </div>
   </header>
@@ -188,11 +193,13 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/site-data.js"></script>
+  <script src="/assets/js/main.js?v=3"></script>
+  <script src="/assets/js/site-data.js?v=3"></script>
+  <script src="/assets/js/life.js?v=3"></script>
   <script>
     Site.renderPubs("#pubs-selected", { selectedOnly: true });
     Site.renderNews("#news-recent", { limit: 6 });
+    Site.fillTotalStars("#stat-stars");
   </script>
 </body>
 </html>
