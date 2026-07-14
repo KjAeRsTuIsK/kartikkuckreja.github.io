@@ -29,7 +29,7 @@
       "arxiv": "2607.03562",
       "title": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
       "authors": ["Abhijeet Narang", "Kartik Kuckreja", "Shreya Ghosh", "Muhammad Haris Khan", "Jianfei Cai", "Abhinav Dhall"],
-      "equal_contribution": [],
+      "equal_contribution": ["Abhijeet Narang", "Kartik Kuckreja"],
       "venue": "Preprint",
       "award": null,
       "year": 2026,
@@ -78,10 +78,11 @@
       "thumbnail": "assets/img/paper-deepfakejudge.jpg",
       "links": {
         "paper": "https://arxiv.org/abs/2602.19715",
-        "code": "https://github.com/KjAeRsTuIsK/DeepfakeJudge"
+        "code": "https://github.com/KjAeRsTuIsK/DeepfakeJudge",
+        "dataset": "https://huggingface.co/datasets/MBZUAI/DeepfakeJudge-Dataset"
       },
       "github_repo": "KjAeRsTuIsK/DeepfakeJudge",
-      "hf_dataset": null,
+      "hf_dataset": "MBZUAI/DeepfakeJudge-Dataset",
       "topics": ["deepfakes", "mllm", "explainability"],
       "selected": true
     },
@@ -99,10 +100,11 @@
       "thumbnail": null,
       "links": {
         "paper": "https://arxiv.org/abs/2507.20579",
-        "project": "https://deepfakes1m.github.io/"
+        "project": "https://deepfakes1m.github.io/",
+        "dataset": "https://huggingface.co/datasets/ControlNet/AV-Deepfake1M-PlusPlus"
       },
       "github_repo": null,
-      "hf_dataset": null,
+      "hf_dataset": "ControlNet/AV-Deepfake1M-PlusPlus",
       "topics": ["deepfakes", "benchmark"],
       "selected": false
     },
@@ -185,9 +187,10 @@
       "abstract": "A comprehensive synthetic face dataset focused on the Indian subcontinent, illuminating a regional deepfake landscape that mainstream datasets overlook.",
       "thumbnail": "assets/img/paper-indiface.jpg",
       "links": {
-        "paper": "https://ieeexplore.ieee.org/abstract/document/10582046"
+        "paper": "https://ieeexplore.ieee.org/abstract/document/10582046",
+        "code": "https://github.com/KjAeRsTuIsK/INDIFACE"
       },
-      "github_repo": null,
+      "github_repo": "KjAeRsTuIsK/INDIFACE",
       "hf_dataset": null,
       "topics": ["deepfakes", "benchmark"],
       "selected": false

@@ -45,7 +45,13 @@
     const line = cssVar("--line-strong") || "rgba(27,28,30,.3)";
 
     ctx.fillStyle = paper; ctx.fillRect(0, 0, W, H);
-    ctx.strokeStyle = line; ctx.lineWidth = 1;
+    // graph-paper grid
+    ctx.strokeStyle = cssVar("--grid-line") || "rgba(27,28,30,.05)";
+    ctx.lineWidth = 1;
+    for (let x = 0.5; x < W; x += 28) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke(); }
+    for (let y = 0.5; y < H; y += 28) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke(); }
+    ctx.strokeStyle = line;
+    ctx.fillStyle = paper; ctx.fillRect(120, 190, 220, 80);
     ctx.strokeRect(120, 190, 220, 80);
     ctx.fillStyle = faint;
     ctx.font = "500 17px 'IBM Plex Mono', monospace";
@@ -80,17 +86,17 @@
   async function fillGithub(el, repo) {
     try {
       const d = await cachedFetch("gh:" + repo, "https://api.github.com/repos/" + repo);
-      el.innerHTML = `${ICONS.star}<b>${fmt(d.stargazers_count)}</b>&nbsp;stars`;
+      el.innerHTML = `${ICONS.star}<b>${fmt(d.stargazers_count)}</b>&nbsp;${d.stargazers_count === 1 ? "star" : "stars"}`;
       el.title = repo + " on GitHub";
     } catch (e) { el.innerHTML = `${ICONS.star}stars`; }
   }
   async function fillHF(el, ds) {
     try {
-      const d = await cachedFetch("hf:" + ds, "https://huggingface.co/api/datasets/" + ds);
-      const n = d.downloads ?? d.downloadsAllTime;
+      const d = await cachedFetch("hf2:" + ds, "https://huggingface.co/api/datasets/" + encodeURI(ds) + "?expand[]=downloads&expand[]=downloadsAllTime");
+      const n = d.downloadsAllTime ?? d.downloads;
       if (n == null) throw 0;
       el.innerHTML = `${ICONS.dl}<b>${fmt(n)}</b>&nbsp;downloads`;
-      el.title = ds + " on Hugging Face";
+      el.title = ds + " on Hugging Face — total downloads";
     } catch (e) { el.style.display = "none"; }
   }
 
