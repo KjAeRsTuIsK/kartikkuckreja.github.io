@@ -36,14 +36,16 @@
     });
   }, 1500);
 
-  // ----- every link opens in a new tab -----
+  // ----- external links open in a new tab; same-site links stay in this tab -----
   // Delegated so it also covers links rendered later from JSON.
   document.addEventListener("click", (e) => {
     const a = e.target.closest && e.target.closest("a[href]");
     if (!a) return;
-    if (/^https?:/.test(a.href)) {
+    if (/^https?:/.test(a.href) && a.origin !== location.origin) {
       a.target = "_blank";
       a.rel = "noopener";
+    } else if (a.target === "_blank" && a.origin === location.origin) {
+      a.removeAttribute("target");
     }
   });
 

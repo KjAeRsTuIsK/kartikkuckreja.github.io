@@ -167,7 +167,7 @@
   }
 
   // ---------- renderers ----------
-  const DATA_V = "?v=6";
+  const DATA_V = "?v=7";
   async function getData() {
     if (!window.__pubData) window.__pubData = fetch("assets/data/publications.json" + DATA_V).then((r) => r.json());
     return window.__pubData;
