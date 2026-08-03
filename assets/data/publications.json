@@ -25,11 +25,49 @@
   },
   "publications": [
     {
+      "id": "explainable-deepfake-detection-challenge",
+      "arxiv": "2607.21007",
+      "title": "Explainable Deepfake Detection Challenge",
+      "authors": [
+        "Abhijeet Narang",
+        "Kartik Kuckreja",
+        "Shreya Ghosh",
+        "Muhammad Haris Khan",
+        "Usman Tariq",
+        "Jianfei Cai",
+        "Abhinav Dhall"
+      ],
+      "equal_contribution": [],
+      "venue": "Preprint",
+      "award": null,
+      "year": 2026,
+      "date": "2026-07-23",
+      "abstract": "Deepfake detection is moving beyond binary classification decisions toward systems that can also explain the visual evidence supporting those decisions. This transition is important for real-world verification settings, where diverse users need to understand not only whether an image is manipulated, but also why it is considered suspicious. The Explainable Deepfake Detection Challenge at ACM Multimedia 2026 is design…",
+      "thumbnail": null,
+      "links": {
+        "paper": "https://arxiv.org/abs/2607.21007"
+      },
+      "github_repo": null,
+      "hf_dataset": null,
+      "topics": [],
+      "selected": false
+    },
+    {
       "id": "xplainverse",
       "arxiv": "2607.03562",
       "title": "XPlainVerse: A Million-Scale Benchmark for Explainable Deepfake Detection",
-      "authors": ["Abhijeet Narang", "Kartik Kuckreja", "Shreya Ghosh", "Muhammad Haris Khan", "Jianfei Cai", "Abhinav Dhall"],
-      "equal_contribution": ["Abhijeet Narang", "Kartik Kuckreja"],
+      "authors": [
+        "Abhijeet Narang",
+        "Kartik Kuckreja",
+        "Shreya Ghosh",
+        "Muhammad Haris Khan",
+        "Jianfei Cai",
+        "Abhinav Dhall"
+      ],
+      "equal_contribution": [
+        "Abhijeet Narang",
+        "Kartik Kuckreja"
+      ],
       "venue": "Preprint",
       "award": null,
       "year": 2026,
@@ -43,14 +81,24 @@
       },
       "github_repo": "Abhijeet8901/XPlainVerse-ACMChallenge",
       "hf_dataset": "Abhijeet8901/XPlainVerse",
-      "topics": ["deepfakes", "explainability"],
+      "topics": [
+        "deepfakes",
+        "explainability"
+      ],
       "selected": true
     },
     {
       "id": "objects-before-words",
       "arxiv": "2606.12985",
       "title": "Objects Before Words: Object-First Inductive Biases for Grounding Language in Child-View Video",
-      "authors": ["Sathira Silva", "Abrham Kahsay Gebreselasie", "Muhammad Umer Sheikh", "Kartik Kuckreja", "Daniel Harari", "Muhammad Haris Khan"],
+      "authors": [
+        "Sathira Silva",
+        "Abrham Kahsay Gebreselasie",
+        "Muhammad Umer Sheikh",
+        "Kartik Kuckreja",
+        "Daniel Harari",
+        "Muhammad Haris Khan"
+      ],
       "equal_contribution": [],
       "venue": "Preprint",
       "award": null,
@@ -63,14 +111,22 @@
       },
       "github_repo": null,
       "hf_dataset": null,
-      "topics": ["vision-language", "grounding"],
+      "topics": [
+        "vision-language",
+        "grounding"
+      ],
       "selected": false
     },
     {
       "id": "deepfakejudge",
       "arxiv": "2602.19715",
       "title": "Pixels Don't Lie (But Your Detector Might): Bootstrapping MLLM-as-a-Judge for Trustworthy Deepfake Detection and Reasoning Supervision",
-      "authors": ["Kartik Kuckreja", "Parul Gupta", "Muhammad Haris Khan", "Abhinav Dhall"],
+      "authors": [
+        "Kartik Kuckreja",
+        "Parul Gupta",
+        "Muhammad Haris Khan",
+        "Abhinav Dhall"
+      ],
       "equal_contribution": [],
       "venue": "CVPR 2026",
       "award": null,
@@ -85,14 +141,27 @@
       },
       "github_repo": "KjAeRsTuIsK/DeepfakeJudge",
       "hf_dataset": "MBZUAI/DeepfakeJudge-Dataset",
-      "topics": ["deepfakes", "mllm", "explainability"],
+      "topics": [
+        "deepfakes",
+        "mllm",
+        "explainability"
+      ],
       "selected": true
     },
     {
       "id": "av-deepfake1m-pp",
       "arxiv": "2507.20579",
       "title": "AV-Deepfake1M++: A Large-Scale Audio-Visual Deepfake Benchmark with Real-World Perturbations",
-      "authors": ["Zhixi Cai", "Kartik Kuckreja", "Shreya Ghosh", "Akanksha Chuchra", "Muhammad Haris Khan", "Usman Tariq", "Tom Gedeon", "Abhinav Dhall"],
+      "authors": [
+        "Zhixi Cai",
+        "Kartik Kuckreja",
+        "Shreya Ghosh",
+        "Akanksha Chuchra",
+        "Muhammad Haris Khan",
+        "Usman Tariq",
+        "Tom Gedeon",
+        "Abhinav Dhall"
+      ],
       "equal_contribution": [],
       "venue": "Preprint",
       "award": null,
@@ -107,14 +176,24 @@
       },
       "github_repo": null,
       "hf_dataset": "ControlNet/AV-Deepfake1M-PlusPlus",
-      "topics": ["deepfakes", "benchmark"],
+      "topics": [
+        "deepfakes",
+        "benchmark"
+      ],
       "selected": false
     },
     {
       "id": "arenav",
       "arxiv": "2505.22581",
       "title": "Tell me Habibi, is it Real or Fake?",
-      "authors": ["Kartik Kuckreja", "Parul Gupta", "Injy Hamed", "Thamar Solorio", "Muhammad Haris Khan", "Abhinav Dhall"],
+      "authors": [
+        "Kartik Kuckreja",
+        "Parul Gupta",
+        "Injy Hamed",
+        "Thamar Solorio",
+        "Muhammad Haris Khan",
+        "Abhinav Dhall"
+      ],
       "equal_contribution": [],
       "venue": "ICLR 2026",
       "award": null,
@@ -129,15 +208,31 @@
       },
       "github_repo": "KjAeRsTuIsK/ArEnAV",
       "hf_dataset": "kartik060702/ArEnAV-Full",
-      "topics": ["deepfakes", "multilingual", "benchmark"],
+      "topics": [
+        "deepfakes",
+        "multilingual",
+        "benchmark"
+      ],
       "selected": true
     },
     {
       "id": "geobench-vlm",
       "arxiv": "2411.19325",
       "title": "GEOBench-VLM: Benchmarking Vision-Language Models for Geospatial Tasks",
-      "authors": ["Muhammad Sohail Danish", "Muhammad Akhtar Munir", "Syed Roshaan Ali Shah", "Kartik Kuckreja", "Fahad Shahbaz Khan", "Paolo Fraccaro", "Alexandre Lacoste", "Salman Khan"],
-      "equal_contribution": ["Muhammad Sohail Danish", "Muhammad Akhtar Munir"],
+      "authors": [
+        "Muhammad Sohail Danish",
+        "Muhammad Akhtar Munir",
+        "Syed Roshaan Ali Shah",
+        "Kartik Kuckreja",
+        "Fahad Shahbaz Khan",
+        "Paolo Fraccaro",
+        "Alexandre Lacoste",
+        "Salman Khan"
+      ],
+      "equal_contribution": [
+        "Muhammad Sohail Danish",
+        "Muhammad Akhtar Munir"
+      ],
       "venue": "ICCV 2025",
       "award": "Highlight",
       "year": 2025,
@@ -151,14 +246,23 @@
       },
       "github_repo": "The-AI-Alliance/GEO-Bench-VLM",
       "hf_dataset": "aialliance/GEOBench-VLM",
-      "topics": ["earth-observation", "vision-language", "benchmark"],
+      "topics": [
+        "earth-observation",
+        "vision-language",
+        "benchmark"
+      ],
       "selected": false
     },
     {
       "id": "alm-bench",
       "arxiv": "2411.16508",
       "title": "All Languages Matter: Evaluating LMMs on Culturally Diverse 100 Languages",
-      "authors": ["Ashmal Vayani", "Dinura Dissanayake", "Kartik Kuckreja", "et al."],
+      "authors": [
+        "Ashmal Vayani",
+        "Dinura Dissanayake",
+        "Kartik Kuckreja",
+        "et al."
+      ],
       "equal_contribution": [],
       "author_note": "70+ authors — full list on arXiv",
       "venue": "CVPR 2025",
@@ -174,14 +278,25 @@
       },
       "github_repo": "mbzuai-oryx/ALM-Bench",
       "hf_dataset": "MBZUAI/ALM-Bench",
-      "topics": ["multilingual", "benchmark", "vision-language"],
+      "topics": [
+        "multilingual",
+        "benchmark",
+        "vision-language"
+      ],
       "selected": false
     },
     {
       "id": "indiface",
       "arxiv": null,
       "title": "INDIFACE: Illuminating India's Deepfake Landscape with a Comprehensive Synthetic Dataset",
-      "authors": ["Kartik Kuckreja", "Ximi Hoque", "Nishit Poddar", "Shukesh Reddy", "Abhinav Dhall", "Abhijit Das"],
+      "authors": [
+        "Kartik Kuckreja",
+        "Ximi Hoque",
+        "Nishit Poddar",
+        "Shukesh Reddy",
+        "Abhinav Dhall",
+        "Abhijit Das"
+      ],
       "equal_contribution": [],
       "venue": "IEEE FG 2024 (SD-FGA Workshop)",
       "award": null,
@@ -195,15 +310,28 @@
       },
       "github_repo": "KjAeRsTuIsK/INDIFACE",
       "hf_dataset": null,
-      "topics": ["deepfakes", "benchmark"],
+      "topics": [
+        "deepfakes",
+        "benchmark"
+      ],
       "selected": false
     },
     {
       "id": "geochat",
       "arxiv": "2311.15826",
       "title": "GeoChat: Grounded Large Vision-Language Model for Remote Sensing",
-      "authors": ["Kartik Kuckreja", "Muhammad Sohail Danish", "Muzammal Naseer", "Abhijit Das", "Salman Khan", "Fahad Shahbaz Khan"],
-      "equal_contribution": ["Kartik Kuckreja", "Muhammad Sohail Danish"],
+      "authors": [
+        "Kartik Kuckreja",
+        "Muhammad Sohail Danish",
+        "Muzammal Naseer",
+        "Abhijit Das",
+        "Salman Khan",
+        "Fahad Shahbaz Khan"
+      ],
+      "equal_contribution": [
+        "Kartik Kuckreja",
+        "Muhammad Sohail Danish"
+      ],
       "venue": "CVPR 2024",
       "award": null,
       "year": 2024,
@@ -219,7 +347,10 @@
       "github_repo": "mbzuai-oryx/GeoChat",
       "hf_model": "MBZUAI/geochat-7B",
       "hf_dataset": "MBZUAI/GeoChat_Instruct",
-      "topics": ["earth-observation", "vision-language"],
+      "topics": [
+        "earth-observation",
+        "vision-language"
+      ],
       "selected": true
     }
   ]
