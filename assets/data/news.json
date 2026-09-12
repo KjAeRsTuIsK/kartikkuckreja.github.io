@@ -1,6 +1,18 @@
 {
   "news": [
     {
+      "date": "2026-08",
+      "label": "2026-08",
+      "text": "Done with Research Engineering for now, started MSc. in Computer Vision :) ",
+      "tag": "career"
+    },
+    {
+      "date": "2026-07",
+      "label": "2026-07",
+      "text": "New preprint on arXiv: <a href='https://arxiv.org/abs/2607.21007' target='_blank' rel='noopener'>Explainable Deepfake Detection Challenge</a>.",
+      "tag": "paper"
+    },
+    {
       "date": "2026-07",
       "label": "2026-07",
       "text": "New preprint on arXiv: <a href='https://arxiv.org/abs/2607.21007' target='_blank' rel='noopener'>Explainable Deepfake Detection Challenge</a>.",
